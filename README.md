@@ -7,10 +7,10 @@
 ![home_page](./images/textmask.png)
 
 ## Development Environment 
-- Clone this [repository](https://github.com/gh0stfrk/TextMask.git)
+- Clone this [repository](https://github.com/gh0stfrk/T3xtM4sk.git)
 
 ```bash
-git clone https://github.com/gh0stfrk/TextMask.git
+git clone https://github.com/gh0stfrk/T3xtM4sk.git
 ```
 - Install node dependencies 
 ```bash
