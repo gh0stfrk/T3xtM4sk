@@ -31,8 +31,8 @@ function MaskText() {
     <>
       <div className="flex items-center flex-col">
       <ToastContainer position="top-center"/>
-        <div className="flex gap-3 border border-black p-5 rounded-xl flex-wrap flex-shrink">
-          <form className="flex flex-col gap-3 md:flex-row md:flex-wrap" method="POST" onSubmit={handleSubmit}>
+        <div className="flex gap-3 rounded-xl flex-wrap flex-shrink">
+          <form className="flex flex-col gap-3 w-screen p-3 md:w-full md:flex-row md:flex-wrap" method="POST" onSubmit={handleSubmit}>
             <textarea
               required
               className="border border-black rounded-md p-5 min-h-64 md:w-full"
@@ -45,14 +45,16 @@ function MaskText() {
               value={plainText}
             ></textarea>
             <div className="flex gap-3 flex-col md:flex-row md:justify-between md:w-full">
-              <div className="flex gap-2 align-center items-center">
+              <div className="flex gap-2 align-center items-center justify-between">
                 <CopyToClipboard text={plainText}>
                   <FaCopy size={20} color="#00df9a" onClick={showToastMessage}/>
                 </CopyToClipboard>
-                <input type="radio" name="type" id="mask" value="mask" defaultChecked onBlur={onValueChange} />
-                <label htmlFor="mask">Mask</label>
-                <input type="radio" name="type" id="unmask" value="unmask" onBlur={onValueChange}/>
-                <label htmlFor="unmask">Unmask</label>
+                <div className="flex gap-2">
+                  <input type="radio" name="type" id="mask" value="mask" defaultChecked onBlur={onValueChange} />
+                  <label htmlFor="mask">Mask</label>
+                  <input type="radio" name="type" id="unmask" value="unmask" onBlur={onValueChange}/>
+                  <label htmlFor="unmask">Unmask</label>
+                </div>
               </div>
 
               <input  className="bg-[#00df9a] px-4 py-2 rounded-lg text-white hover:text-white hover:bg-black" type="submit" value="Process" />
